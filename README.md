@@ -20,3 +20,24 @@ dan apabila terdapat error maka penyelesaiannya akan lebih lama karena dokumenta
 php artisan migrate --seed
 ```
 - API Collection dapat di-import dari file ```AlbaTest.postman_collection.json``` yang tersedia.
+- Jalan perintah berikut untuk melakukan koneksi storage pada proyek Laravel sebelum menjalankan server laravel
+```
+php artisan storage:link
+```
+
+Akun yang dapat digunakan untuk mengakses aplikasi (web/api)
+- Admin:
+```
+email: admin@gmail.com
+password: admin123
+```
+- User
+```
+email: user@gmail.com
+password: user123
+```
+- Super User
+```
+email: superuser@gmail.com
+password: superuser123
+```
