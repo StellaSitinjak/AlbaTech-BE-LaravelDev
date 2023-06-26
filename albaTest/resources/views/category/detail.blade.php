@@ -67,7 +67,7 @@
                             </td>
                             <td>
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <a class="btn btn-submit" href="#"><i class="fas fa-edit"></i></a>
+                                    <a class="btn-link" href="#"><i class="fas fa-edit"></i></a>
                                     <a class="btn-link" href="{{ route('category.edit', $datas->id) }}" method="delete"
                                         onclick="return confirm('Yakin ingin menghapus category?')"><i
                                             class="fas fa-trash"></i></a>

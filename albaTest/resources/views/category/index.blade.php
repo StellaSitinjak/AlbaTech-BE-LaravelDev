@@ -10,52 +10,32 @@
             <li class="breadcrumb-item active">Category</li>
         </ol>
 
-        @if (session('name') == 'Admin')
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="col-md-10 offset-md-1">
-                    @if(session('alert'))
-                    <div class="alert alert-danger">
-                        <div>{{ session('alert') }}</div>
-                    </div>
-                    @endif
-                    @if(session('alert-success'))
-                    <div class="alert alert-success">
-                        <div>{{ session('alert-success') }}</div>
-                    </div>
-                    @endif
-
-                    <form action="{{ route('category.store') }}" method="POST">
-                        @csrf
-                        <div class="row mt-4">
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label for="name" class="col-md-4 control-label"><b>Nama</b></label>
-                                    <input id="name" type="text"
-                                        class="form-control @error('name') is-invalid @enderror" name="name"
-                                        value="{{ old('name') }}" required autofocus>
-                                    @if ($errors->has('name'))
-                                    <span class="text-danger">{{ $errors->first('name') }}</span>
-                                    @endif
-                                </div>
-
-                                <div class="d-flex align-items-center justify-content-between col-md-12">
-                                    <input class="submit-button col-md-3 offset-md-5 btn btn-primary" type="submit"
-                                        value="Tambah Category">
-                                </div>
-                            </div>
-                        </div>
-                        <input type="hidden" name="action" value="Masuk">
-                    </form>
-                </div>
-            </div>
+        @if(session('alert'))
+        <div class="alert alert-danger">
+            <div>{{ session('alert') }}</div>
+        </div>
+        @endif
+        @if(session('alert-success'))
+        <div class="alert alert-success">
+            <div>{{ session('alert-success') }}</div>
         </div>
         @endif
 
         <div class="card mb-4">
+            @if (session('name') == 'Admin')
             <div class="card-header d-flex align-items-center justify-content-between">
                 <div><i class="fas fa-table me-1"></i> Category Data</div>
+                <form action="{{ route('category.store') }}" method="POST">
+                    @csrf
+                    <div class="col-md-15">
+                        <input id="name" type="text" placeholder="Nama Kategori" class="form-control" name="name"
+                            required>
+                        <input class="btn btn-primary" type="submit" value="Tambah">
+                    </div>
+                    <input type="hidden" name="action" value="Masuk">
+                </form>
             </div>
+            @endif
             <div class="card-body">
                 <table id="datatablesSimple">
                     <thead>

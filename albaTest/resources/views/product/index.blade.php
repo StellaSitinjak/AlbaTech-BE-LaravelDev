@@ -76,8 +76,8 @@
                             @if (session('name') == 'Admin')
                             <td>
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <a class="btn btn-submit" href="{{ route('products.show', $datas->id) }}"><i class="fas fa-info-circle"></i></a>
-                                    <a class="btn btn-submit" href="#"><i class="fas fa-edit"></i></a>
+                                    <a class="btn-link" href="{{ route('products.show', $datas->id) }}"><i class="fas fa-info-circle"></i></a>
+                                    <a class="btn-link" href="#"><i class="fas fa-edit"></i></a>
                                     <a class="btn-link" href="{{ route('products.edit', $datas->id) }}" method="delete"
                                         onclick="return confirm('Yakin ingin menghapus produk?')"><i
                                             class="fas fa-trash"></i></a>

@@ -121,7 +121,7 @@
                                 </div>
                             </div>
                         </div>
-                        <input type="hidden" name="action" value="Masuk">
+                        <input type="hidden" name="action" value="Daftar">
                     </form>
                 </div>
             </div>

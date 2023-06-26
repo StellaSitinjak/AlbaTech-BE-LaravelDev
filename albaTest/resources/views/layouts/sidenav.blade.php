@@ -17,25 +17,18 @@
                     <nav class="sb-sidenav-menu-nested nav">
                         <a class="nav-link" href="{{ Route('user.index') }}">List User</a>
                         @if (session('name') == 'Admin')
-                        <a class="nav-link" href="{{ Route('user.create') }}">Add User</a>
+                        <a class="nav-link" href="{{ route('user.create') }}">Add User</a>
                         @endif
                     </nav>
                 </div>
 
                 <!-- Category -->
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCategory" aria-expanded="false" aria-controls="collapseCategory">
+                @if (session('name') == 'Admin')
+                <a class="nav-link" href="{{ Route('category.index') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                     Category
-                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
-                <div class="collapse" id="collapseCategory" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                    <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="{{ Route('category.index') }}">List Category</a>
-                        @if (session('name') == 'Admin')
-                        <a class="nav-link" href="{{ Route('category.create') }}">Add Category</a>
-                        @endif
-                    </nav>
-                </div>
+                @endif
 
                 <!-- Product -->
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseProduct" aria-expanded="false" aria-controls="collapseProduct">

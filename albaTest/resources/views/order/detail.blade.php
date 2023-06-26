@@ -77,7 +77,7 @@
                             </td>
                             <td>
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <a class="btn btn-submit" href="#"><i
+                                    <a class="btn-link" href="#"><i
                                         class="fas fa-edit"></i></a>
                                     <a class="btn-link" href="{{ route('order.edit', $datas->id) }}" method="delete"
                                         onclick="return confirm('Yakin ingin menghapus order?')"><i
