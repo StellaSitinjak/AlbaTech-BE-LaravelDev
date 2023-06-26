@@ -14,7 +14,7 @@ Karena saya perlu untuk menyesuaikan kembali algoritma versi lama ke versi terba
 dan apabila terdapat error maka penyelesaiannya akan lebih lama karena dokumentasi serta forum yang belum banyak.
 ```
 
-#### 3. Mini Project:
+#### 3. Mini Project menggunakan Laravel 10:
 - Database dapat di-import dari file ```test.sql``` yg tersedia, dapat juga dilakukan melalui migration laravel dengan menjalankan perintah:
 ```
 php artisan migrate --seed
